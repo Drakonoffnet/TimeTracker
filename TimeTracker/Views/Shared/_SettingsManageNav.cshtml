@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using TimeTracker.Helpers
+@using TimeTracker.Models
+@using TimeTracker.Views.Manage
+
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="@SettingNavPages.IndexNavClass(ViewContext)">
+        <a asp-action="Index" asp-controller="Settings">Start page</a>
+    </li>
+    <li class="@SettingNavPages.ProjectsNavClass(ViewContext)">
+        <a asp-action="Projects" asp-controller="Settings">Projects</a>
+    </li>
+    <li class="@SettingNavPages.TeamsNavClass(ViewContext)">
+        <a asp-action="Teams" asp-controller="Settings">Teams</a>
+    </li>
+    <li class="@SettingNavPages.TaskDefaultValueNavClass(ViewContext)">
+        <a asp-action="TaskDefaultValue" asp-controller="Settings">Default value for task</a>
+    </li>
+</ul>

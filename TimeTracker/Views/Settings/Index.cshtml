@@ -1,7 +1,31 @@
-﻿
+﻿@using TimeTracker.Helpers
+@using TimeTracker.Models.ManageViewModels
+@model TimeTracker.Models.ManageViewModels.IndexViewModel
 @{
     ViewData["Title"] = "Index";
+    ViewData.AddActivePage(SettingNavPages.Index);
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+             
+            <div class="caption">
+                <p> <i class="glyphicon glyphicon-user"></i> Teams</p> 
+                <p>10</p>
+               
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+             
+            <div class="caption">
+                <p> <i class="glyphicon glyphicon-user"></i> Members</p> 
+                <p>100</p>
+               
+            </div>
+        </div>
+    </div>
+</div>
 

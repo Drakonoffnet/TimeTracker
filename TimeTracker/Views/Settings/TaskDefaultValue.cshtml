@@ -1,0 +1,9 @@
+﻿@using TimeTracker.Helpers
+@using TimeTracker.Models.ManageViewModels
+@model TimeTracker.Models.ManageViewModels.IndexViewModel
+@{
+    ViewData["Title"] = "Default value for task";
+    ViewData.AddActivePage(SettingNavPages.TaskDefaultValue);
+}
+
+<h2>@ViewData["Title"]</h2>

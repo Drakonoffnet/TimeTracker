@@ -15,6 +15,29 @@ namespace TimeTracker.Controllers
 
         #region project
 
+        public IActionResult Projects()
+        {
+            return View();
+        }
+        
+        #endregion
+
+        #region Teams
+
+        public IActionResult Teams()
+        {
+            return View();
+        }
+
+        #endregion
+
+        #region TaskDefaultValue
+
+        public IActionResult TaskDefaultValue()
+        {
+            return View();
+        }
+
         #endregion
     }
 }
