@@ -1,7 +1,51 @@
 ﻿@using TimeTracker.Helpers
-@using TimeTracker.Models.ManageViewModels
-@model TimeTracker.Models.ManageViewModels.IndexViewModel
+@using TimeTracker.Models.SettingsViewModels
+@model IEnumerable<ProjectViewModel>
 @{
     ViewData["Title"] = "Projects";
     ViewData.AddActivePage(SettingNavPages.Projects);
 }
+<div class="row">
+    <div class="col-lg-3">
+        <button class="btn btn-success">Add new project</button>
+    </div>
+    <div class="col-lg-9">
+        <div class="input-group">
+            <input type="text" class="form-control" aria-label="..." placeholder="plase type name project">
+            <div class="input-group-btn">
+               <button class="btn btn-info">Go</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Name project</th>
+                <th>Count members</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.CountMembers</td>
+                    <td>
+                       
+                    <td>@item.Name</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn">Edit</button>
+                            <button class="btn">Add member</button>
+                        </div>
+                     </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+</div>
